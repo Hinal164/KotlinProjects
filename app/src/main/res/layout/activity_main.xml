@@ -7,13 +7,22 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
+    <ImageView
+            android:id="@+id/img"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
     <TextView
             android:id="@+id/tvName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Name:"
             app:layout_constraintBaseline_toBaselineOf="@+id/edName"
-            app:layout_constraintLeft_toLeftOf="parent" />
+            app:layout_constraintLeft_toLeftOf="parent"/>
 
     <EditText
             android:id="@+id/edName"
@@ -22,7 +31,7 @@
             android:inputType="text"
             app:layout_constraintLeft_toRightOf="@id/tvName"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/img"/>
 
     <TextView
             android:id="@+id/tvAge"
@@ -30,7 +39,7 @@
             android:layout_height="wrap_content"
             android:text="Age:"
             app:layout_constraintBaseline_toBaselineOf="@+id/edAge"
-            app:layout_constraintLeft_toLeftOf="parent" />
+            app:layout_constraintLeft_toLeftOf="parent"/>
 
     <EditText
             android:id="@+id/edAge"
@@ -39,7 +48,7 @@
             android:inputType="number"
             app:layout_constraintLeft_toRightOf="@+id/tvAge"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edName" />
+            app:layout_constraintTop_toBottomOf="@+id/edName"/>
 
     <TextView
             android:id="@+id/tvMob"
@@ -47,7 +56,7 @@
             android:layout_height="wrap_content"
             android:text="Mob No.:"
             app:layout_constraintBaseline_toBaselineOf="@+id/edMob"
-            app:layout_constraintLeft_toLeftOf="parent" />
+            app:layout_constraintLeft_toLeftOf="parent"/>
 
     <EditText
             android:id="@+id/edMob"
@@ -56,7 +65,7 @@
             android:inputType="number"
             app:layout_constraintLeft_toRightOf="@+id/tvMob"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edAge" />
+            app:layout_constraintTop_toBottomOf="@+id/edAge"/>
 
     <TextView
             android:id="@+id/tvEmail"
@@ -64,7 +73,7 @@
             android:layout_height="wrap_content"
             android:text="Email:"
             app:layout_constraintBaseline_toBaselineOf="@+id/edEmail"
-            app:layout_constraintLeft_toLeftOf="parent" />
+            app:layout_constraintLeft_toLeftOf="parent"/>
 
     <EditText
             android:id="@+id/edEmail"
@@ -73,7 +82,7 @@
             android:inputType="textEmailAddress"
             app:layout_constraintLeft_toRightOf="@+id/tvEmail"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edMob" />
+            app:layout_constraintTop_toBottomOf="@+id/edMob"/>
 
     <Button
             android:id="@+id/submit"
@@ -83,6 +92,6 @@
             android:text="Submit"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/edEmail" />
+            app:layout_constraintTop_toBottomOf="@id/edEmail"/>
 
 </android.support.constraint.ConstraintLayout>

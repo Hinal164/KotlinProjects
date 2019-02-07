@@ -73,8 +73,8 @@
 
                     <ImageView
                             android:id="@+id/img"
-                            android:layout_width="70dp"
-                            android:layout_height="70dp"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
                             android:padding="3dp"
                             android:src="@drawable/ic_launcher_background"
                             app:layout_constraintBottom_toBottomOf="parent"

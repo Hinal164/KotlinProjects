@@ -13,6 +13,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.Toast
+import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.activtiy_list.*
 import kotlinx.android.synthetic.main.user_row_item.view.*
 
@@ -109,6 +110,7 @@ class ListActivity : AppCompatActivity(), MyClickListener {
                 itemView.txtAge.text = "Age: " + user.age.toString()
                 itemView.txtMob.text = "Mob: " + user.mob.toString()
                 itemView.txtEmail.text = "Email: " + user.email
+                Glide.with(itemView.context).load(user.image).into(itemView.img)
 
                 itemView.delete_layout.setOnClickListener(this)
                 itemView.edit_layout.setOnClickListener(this)
