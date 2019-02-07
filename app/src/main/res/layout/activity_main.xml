@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name:"
+            app:layout_constraintBaseline_toBaselineOf="@+id/edName"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+    <EditText
+            android:id="@+id/edName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            app:layout_constraintLeft_toRightOf="@id/tvName"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+            android:id="@+id/tvAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Age:"
+            app:layout_constraintBaseline_toBaselineOf="@+id/edAge"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+    <EditText
+            android:id="@+id/edAge"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            app:layout_constraintLeft_toRightOf="@+id/tvAge"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edName" />
+
+    <TextView
+            android:id="@+id/tvMob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mob No.:"
+            app:layout_constraintBaseline_toBaselineOf="@+id/edMob"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+    <EditText
+            android:id="@+id/edMob"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            app:layout_constraintLeft_toRightOf="@+id/tvMob"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edAge" />
+
+    <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email:"
+            app:layout_constraintBaseline_toBaselineOf="@+id/edEmail"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+    <EditText
+            android:id="@+id/edEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            app:layout_constraintLeft_toRightOf="@+id/tvEmail"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edMob" />
+
+    <Button
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Submit"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edEmail" />
+
+</android.support.constraint.ConstraintLayout>
