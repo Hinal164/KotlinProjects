@@ -1,10 +1,10 @@
-package com.example.android_pc.kotlinbasics
+package com.example.kotlinbasics
 
-import android.content.Context
 import android.util.Log
 
+
 open class TestClass2(name:String, val lastName: String, override  val count:Int)
-    : TestClass1(name.capitalize().also { println("Argument for Base: $it") }),TestInerface {
+    : TestClass1(name.capitalize().also { println("Argument for Base: $it") }), TestInerface {
     //to inherit base class make base class as "open"
     //count is a property of TestInterface
 

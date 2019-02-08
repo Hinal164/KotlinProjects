@@ -69,6 +69,7 @@ class MainActivity : AppCompatActivity() {
         }
         Log.d("value", " done with nested loop")
 
+        val d=TestClass2("hello","wolrd",1)
     }
 
 }

@@ -1,4 +1,4 @@
-package com.example.android_pc.kotlinbasics
+package com.example.kotlinbasics
 
 interface TestInerface {
     val count:Int
