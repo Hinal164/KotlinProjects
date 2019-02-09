@@ -1,8 +1,6 @@
-package com.example.kotlinbasics
+package com.example.kotlinbasics.ClassesAndInheritance
 
-import android.content.Context
 import android.util.Log
-import android.view.View
 
 open class TestClass1(name:String)  {
 
@@ -14,5 +12,12 @@ open class TestClass1(name:String)  {
 
     init { Log.d("test","Initializing Base") }
     open val size: Int = name.length.also {Log.d("test","Initializing size in Base: $it") }
+
+    open fun f(){
+        Log.d("test","TestClass1.f()")
+    }
+    open val y:Int get() = 10
+
+
 
 }

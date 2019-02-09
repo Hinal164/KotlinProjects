@@ -1,8 +1,9 @@
-package com.example.kotlinbasics
+package com.example.kotlinbasics.ClassesAndInheritance
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.example.kotlinbasics.R
 
 
 class MainActivity : AppCompatActivity() {
@@ -69,7 +70,14 @@ class MainActivity : AppCompatActivity() {
         }
         Log.d("value", " done with nested loop")
 
-        val d=TestClass2("hello","wolrd",1)
+        val a= TestClass2("hello", "world", 1)
+
+        val b= TestClass2("hello", "world", 1).f()
+
+        val c:Int= TestClass2("hello", "world", 1).y
+        Log.d("test","$c")
+
+        val d= TestClass2("hello", "world", 1).Baz().g()
     }
 
 }
