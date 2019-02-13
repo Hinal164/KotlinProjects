@@ -1,4 +1,4 @@
-package com.example.kotlinbasics.Delegation
+package com.example.kotlinbasics.DelegationAndFunctions
 
 import android.util.Log
 

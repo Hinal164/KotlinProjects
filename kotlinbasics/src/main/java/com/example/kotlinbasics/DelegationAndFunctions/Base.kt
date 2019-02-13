@@ -1,4 +1,4 @@
-package com.example.kotlinbasics.Delegation
+package com.example.kotlinbasics.DelegationAndFunctions
 
 interface Base {
     val message: String
