@@ -19,14 +19,16 @@
         <activity android:name=".SealedClass.FourthActivity"/>
 
 
-        <activity android:name=".DelegationAndFunctions.FifthActivity">
+        <activity android:name=".DelegationAndFunctions.FifthActivity"/>
+
+        <activity android:name=".Generics.SixthActivity"/>
+        <activity android:name=".HigherOrderFunctionsAndLambdas.SeventhActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".Generics.SixthActivity"/>
 
     </application>
 
