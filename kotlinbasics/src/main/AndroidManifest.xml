@@ -22,14 +22,15 @@
         <activity android:name=".DelegationAndFunctions.FifthActivity"/>
 
         <activity android:name=".Generics.SixthActivity"/>
-        <activity android:name=".HigherOrderFunctionsAndLambdas.SeventhActivity">
+        <activity android:name=".HigherOrderFunctionsAndLambdas.SeventhActivity"/>
+
+        <activity android:name=".OtherFunctionalities.KotlinActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

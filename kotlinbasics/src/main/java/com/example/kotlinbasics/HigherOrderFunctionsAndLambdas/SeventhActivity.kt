@@ -88,9 +88,9 @@ class SeventhActivity : AppCompatActivity() {
         //Invoking a function type instance
         //A value of a function type can be invoked by using its invoke() operator: funName.invoke(x) or just funName(x).
         /*If the value has a receiver type, the receiver object should be passed as the first argument.
-         * Another way to invoke a value of a function type with receiver is to prepend it with the receiver object,
-         * as if the value were an extension function: 1.foo(2)
-         *  */
+        * Another way to invoke a value of a function type with receiver is to prepend it with the receiver object,
+        * as if the value were an extension function: 1.foo(2)
+        **/
         val stringPlus: (String, String) -> String = String::plus
         val intPlus: Int.(Int) -> Int = Int::plus
         Log.d("test", ""+stringPlus.invoke("<-", "->"))
@@ -115,6 +115,7 @@ class SeventhActivity : AppCompatActivity() {
 
         //Inline Function
         foo()
+        normalFunction()
     }
 
     private fun functionReference1(str: String, expression: (String) -> String) {
@@ -141,12 +142,32 @@ class SeventhActivity : AppCompatActivity() {
 
     val anoSum = fun(x: Int, y: Int): Int = x + y
 
-    private inline fun inlined(block: () -> Unit) { //InlineFunction
+    private inline fun inlinedFunction(block: () -> Unit) { //InlineFunction
         Log.d("test", "hi!")
     }
-    fun foo() {
-        inlined {
-            return // OK: the lambda is inlined
+    private fun foo() {
+        inlinedFunction {
+            return // This will run perfectly:because the lambda is inlined
+            //Such returns (located in a lambda, but exiting the enclosing function) are called non-local returns.
         }
+    }
+    private fun normalFunction() {
+        Log.d("test","This is normal function.")
+        inlineFunctionExample({  Log.d("test","Inlined Functions")
+            return},
+            //Inline Allows Non-Local Control Flow::
+            //With inline functions, you can return from the lambda expression itself and
+            // it’ll exit the function in which inline function was called.
+            //If we mark the lambda expression as crossinline : eg. crossinline myFunction: () -> Unit
+            //then it will give compile time error
+            {  Log.d("test","Instead of object creation it copies the code.")} )
+
+        Log.d("test","This is normal function closing")
+    }
+    private inline fun inlineFunctionExample( /*crossinline*/ myFunction: () -> Unit, noinline another: () -> Unit  ) {
+        //noinline modifier is used to set expressions not to be inlined in the call.
+        myFunction()
+        another()
+        Log.d("test","Finally it's working fine!")
     }
 }
